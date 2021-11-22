@@ -14,7 +14,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toast.makeText(this, "Gib Access", Toast.LENGTH_SHORT).show();
-        startService(new Intent(Settings.ACTION_ACCESSIBILITY_SETTINGS)
-        .setPackage(getPackageName()));
+        try{
+            startService(new Intent(this, LockScreen.class));
+        }catch (Throwable tr){
+            tr.printStackTrace();
+        }
     }
 }
