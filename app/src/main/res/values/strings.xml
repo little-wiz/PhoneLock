@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Phone Lock</string>
+    <string name="lock_text">Wizard Ban</string>
+    <string name="lock_input">Input Password</string>
 </resources>
